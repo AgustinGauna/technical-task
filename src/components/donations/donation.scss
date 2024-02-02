@@ -1,0 +1,143 @@
+.donation-container {
+    width: 700px;
+    background-color: #ffffff;
+    border: 1px solid rgba(128, 128, 128, 0.3);
+    height: auto;
+    padding-top: 25px;
+    padding-bottom: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+
+
+
+    p {
+        font-size: 12px;
+        font-weight: 500;
+    }
+
+    .top {
+        width: 650px;
+    }
+
+    .donation-buttons {
+
+        width: 650px;
+        display: flex;
+        gap: 5px;
+
+        .pound {
+            height: 12px;
+            width: auto;
+        }
+
+        button {
+            width: 80px;
+            height: 35px;
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: 700;
+            font-size: 17px;
+            background-color: rgb(235, 237, 244);
+            border: 1px solid gray;
+            cursor: pointer;
+
+
+        }
+
+        .active {
+            background-color: rgb(49, 156, 161);
+            color: #ffffff;
+
+            .pound {
+                filter: invert(100%) sepia(95%) saturate(21%) hue-rotate(22deg) brightness(105%) contrast(108%);
+            }
+
+            .selected-img {
+                height: 18px;
+                width: auto;
+                padding: 0 5px 0 5px;
+            }
+        }
+
+        .custom-amount {
+            height: 35px;
+            display: flex;
+            justify-content: flex-start;
+            background-color: white;
+            border: 1px solid gray;
+            gap: 5px;
+            width: 160px;
+            padding: 5px 0px 5px 10px;
+            font-size: 12px;
+            font-weight: 700;
+        }
+
+        .submit-button {
+            display: flex;
+            align-items: center;
+            width: 200px;
+            gap: 5px;
+            background-color: rgb(246, 146, 32);
+            border: none;
+            font-size: 15px;
+            font-weight: 700;
+
+            .secure {
+                height: 12px;
+                width: 15px;
+            }
+        }
+    }
+
+    .message {
+        display: flex;
+        align-items: center;
+        padding: 15px;
+        width: 650px;
+        height: 50px;
+        background-color: rgb(251, 206, 155);
+
+        p {
+            font-size: 13px;
+            font-weight: 600;
+        }
+
+    }
+
+    .payment-info {
+        height: 70px;
+        width: 100%;
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        background-color: rgb(234, 237, 244);
+        padding: 25px;
+
+        p {
+            text-decoration: underline;
+            text-underline-offset: 3px;
+            font-size: 11px;
+        }
+
+        div {
+            display: flex;
+            align-items: flex-end;
+            gap: 15px;
+
+            p {
+                font-size: 10px;
+                color: gray;
+                text-decoration: none;
+            }
+
+            img {
+                height: 20px;
+                width: auto;
+            }
+        }
+    }
+}
