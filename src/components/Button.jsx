@@ -1,12 +1,12 @@
-import React from "react";
+import React from 'react';
 
-const Button = ({ amount, selected }) => {
+const Button = ({ amount, selected, onClick }) => {
   return (
-    <button className={selected ? "active" : ""}>
-      <img className="pound" src="pound.svg" alt="pound sign" />
+    <button className={selected ? 'active' : ''} onClick={onClick}>
+      <img className='pound' src='pound.svg' alt='pound sign' />
       {amount}
       {selected ? (
-        <img className="selected-img" src="selected.svg" alt="selected img" />
+        <img className='selected-img' src='selected.svg' alt='selected' />
       ) : (
         <></>
       )}
