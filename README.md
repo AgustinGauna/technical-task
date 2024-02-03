@@ -2,6 +2,10 @@
 
 This project is a technical test designed to demonstrate proficiency in HTML, CSS and React
 
+## Live Demo
+
+#### https://technical-task-b3gg.vercel.app/
+
 ## How to run locally
 
 ### Clone the repository:
