@@ -19,6 +19,7 @@ const Donation = ({ isMonthly, values, handleComponents }) => {
   const lastClickedIndex = useButtonStore((state) => state.lastClickedIndex);
   const customDonation = useCustomDonation((state) => state.open);
   const setCustomDonation = useCustomDonation((state) => state.setOpen);
+  const setCustomDonationOpen = useCustomDonation((state) => state.setOpen);
   const setLastClickedIndex = useButtonStore(
     (state) => state.setLastClickedIndex
   );
@@ -33,6 +34,18 @@ const Donation = ({ isMonthly, values, handleComponents }) => {
 
   const donation = useDonationStore((state) => state.donation);
   const setDonation = useDonationStore((state) => state.setDonation);
+
+  const handleDonation = () => {
+    if (donation > 0) {
+      toast.success(`Success, thank you for your £${donation} donation`);
+      setLastClickedIndex(null);
+      setDonation(null);
+      setCustomDonationOpen(false);
+      setLastClickedIndex(null);
+    } else {
+      return;
+    }
+  };
 
   return (
     <div className='donation-container'>
@@ -59,7 +72,6 @@ const Donation = ({ isMonthly, values, handleComponents }) => {
 
           <button
             onClick={() => {
-              setLastClickedIndex(null);
               setCustomDonation(true);
             }}
             className={
@@ -75,13 +87,7 @@ const Donation = ({ isMonthly, values, handleComponents }) => {
 
           <button
             onClick={() => {
-              if (donation > 0) {
-                toast.success(
-                  `Success, thank you for your £${donation} donation`
-                );
-              } else {
-                return;
-              }
+              handleDonation();
             }}
             className='submit-button'
           >
