@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import './App.scss';
-import Donation from './components/Donations/Donation';
+import Donation from './components/donations/Donation';
 import useDonationStore from './store/useDonationStore';
 import useButtonStore from './store/useButtonStore';
 import useCustomDonation from './store/useCustomDonation';
